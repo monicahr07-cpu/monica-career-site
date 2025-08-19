@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- 首頁 -->
   <url>
     <loc>https://monica-career-site.vercel.app/</loc>
     <lastmod>2025-08-19</lastmod>
@@ -8,6 +9,7 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- index.html -->
   <url>
     <loc>https://monica-career-site.vercel.app/index.html</loc>
     <lastmod>2025-08-19</lastmod>
@@ -15,6 +17,7 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- CSS -->
   <url>
     <loc>https://monica-career-site.vercel.app/style.css</loc>
     <lastmod>2025-08-19</lastmod>
@@ -22,11 +25,20 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- JS -->
   <url>
     <loc>https://monica-career-site.vercel.app/script.js</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <!-- 個人照片 -->
+  <url>
+    <loc>https://monica-career-site.vercel.app/Monica.jpg.jpg</loc>
+    <lastmod>2025-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>
