@@ -1,8 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 首頁 -->
   <url>
     <loc>https://monica-career-site.vercel.app/</loc>
   </url>
+
+  <!-- 主要頁面 -->
   <url>
     <loc>https://monica-career-site.vercel.app/index.html</loc>
   </url>
+
+  <!-- 主要資源 -->
+  <url>
+    <loc>https://monica-career-site.vercel.app/style.css</loc>
+  </url>
+  <url>
+    <loc>https://monica-career-site.vercel.app/script.js</loc>
+  </url>
+  <url>
+    <loc>https://monica-career-site.vercel.app/Monica.jpg.jpg</loc>
+  </url>
+
 </urlset>
