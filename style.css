@@ -1,4 +1,111 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-header { background: #f2f2f2; padding: 2em; text-align: center; }
-main { padding: 1.5em; }
-h1 { color: #333; }
+/* ====== 基本排版與色彩 ====== */
+:root{
+  --bg:#fafafa;
+  --card:#ffffff;
+  --text:#222;
+  --muted:#666;
+  --primary:#0b72d2;
+  --primary-dark:#085aa6;
+  --shadow:0 8px 24px rgba(0,0,0,.08);
+  --radius:12px;
+  --max: 980px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* ====== 區塊：頁首（Hero） ====== */
+header{
+  background: linear-gradient(180deg, rgba(11,114,210,.95), rgba(11,114,210,.85));
+  color:#fff;
+  padding:48px 20px 40px;
+  text-align:center;
+}
+header h1{
+  margin:0 0 10px;
+  font-size: clamp(28px, 4vw, 36px);
+  letter-spacing:.02em;
+}
+header p{
+  margin:6px auto 0;
+  max-width: var(--max);
+  font-size: clamp(16px, 2.3vw, 18px);
+  color: #e8f2ff;
+}
+
+/* ====== 主要內容容器 ====== */
+main, body > section, body > .card {
+  max-width: var(--max);
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+/* 你的頁面是用多個 <section>，這裡做統一外觀 */
+section{
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+/* ====== 標題樣式 ====== */
+h2{ font-size: clamp(22px, 3vw, 26px); margin: 0 0 12px; letter-spacing:.02em; }
+h3{ font-size: clamp(18px, 2.6vw, 20px); margin: 4px 0 12px; color: var(--primary); }
+
+/* ====== 文字與連結 ====== */
+p{ margin: 10px 0; }
+a{ color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+a:hover{ color: var(--primary-dark); }
+
+/* ====== 清單 ====== */
+ul{ margin: 8px 0 0; padding-left: 20px; }
+li{ margin: 6px 0; }
+
+/* ====== 頭像（第一個 section 裡的圖片） ====== */
+/* 你的 HTML 沒有 class，我們用位置選擇器讓它自動變圓形 */
+section:first-of-type img{
+  width: 200px;
+  max-width: 60vw;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display:block;
+  margin: 0 auto;
+  box-shadow: 0 10px 24px rgba(0,0,0,.15);
+}
+
+/* 如果你之後在 <img> 加 class="avatar"，會用這組（可選） */
+.avatar{
+  width: 200px; height: 200px; border-radius: 50%;
+  object-fit: cover; display:block; margin:0 auto;
+  box-shadow: 0 10px 24px rgba(0,0,0,.15);
+}
+
+/* ====== 「聯絡我」區塊的小細節 ====== */
+section:has(h3:contains("聯絡我")) p{ margin: 6px 0; } /* 部分瀏覽器不支援時可忽略 */
+
+/* ====== 按鈕（若未來需要） ====== */
+.btn{
+  display:inline-block; padding: 12px 18px; border-radius:10px;
+  background: var(--primary); color:#fff; text-decoration:none; font-weight:600;
+  box-shadow: 0 6px 16px rgba(11,114,210,.25);
+  transition: transform .05s ease, background .2s ease;
+}
+.btn:hover{ background: var(--primary-dark); }
+.btn:active{ transform: translateY(1px); }
+
+/* ====== RWD：手機優化 ====== */
+@media (max-width: 640px){
+  section{ padding: 18px; }
+  ul{ padding-left: 18px; }
+}
